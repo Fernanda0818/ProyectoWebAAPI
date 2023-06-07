@@ -1,12 +1,16 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\tilo\\source\\repos\\WebApplication1\\wwwroot\\grafica.html",
-      "PackagePath": "staticwebassets\\grafica.html"
+      "Id": "C:\\Users\\Fer\\Documents\\ITSUR\\WEB III\\UNIDAD 5\\repos\\WebApplication2\\WebApplication1\\wwwroot\\Consulta1.html",
+      "PackagePath": "staticwebassets\\Consulta1.html"
     },
     {
-      "Id": "C:\\Users\\tilo\\source\\repos\\WebApplication1\\wwwroot\\index.html",
-      "PackagePath": "staticwebassets\\index.html"
+      "Id": "C:\\Users\\Fer\\Documents\\ITSUR\\WEB III\\UNIDAD 5\\repos\\WebApplication2\\WebApplication1\\wwwroot\\Consulta2.html",
+      "PackagePath": "staticwebassets\\Consulta2.html"
+    },
+    {
+      "Id": "C:\\Users\\Fer\\Documents\\ITSUR\\WEB III\\UNIDAD 5\\repos\\WebApplication2\\WebApplication1\\wwwroot\\Consulta3.html",
+      "PackagePath": "staticwebassets\\Consulta3.html"
     },
     {
       "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props",

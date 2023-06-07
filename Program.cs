@@ -12,7 +12,7 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(opts =>
 {
     opts.AddDefaultPolicy(politica =>
-    politica.WithOrigins("http://127.0.0.1:5500").AllowAnyHeader().AllowAnyMethod());
+    politica.WithOrigins("http://localhost:84").AllowAnyHeader().AllowAnyMethod());
 });
 
 

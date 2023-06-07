@@ -10780,11 +10780,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fer\\Documents\\ITSUR\\WEB III\\UNIDAD 5\\repos\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\Users\\Fer\\Documents\\ITSUR\\WEB III\\UNIDAD 5\\repos\\WebApplication2\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "C:\\Users\\Fer\\Documents\\ITSUR\\WEB III\\UNIDAD 5\\repos\\WebApplication1\\WebApplication1.csproj",
+      "projectPath": "C:\\Users\\Fer\\Documents\\ITSUR\\WEB III\\UNIDAD 5\\repos\\WebApplication2\\WebApplication1\\WebApplication1.csproj",
       "packagesPath": "C:\\Users\\Fer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fer\\Documents\\ITSUR\\WEB III\\UNIDAD 5\\repos\\WebApplication1\\obj\\",
+      "outputPath": "C:\\Users\\Fer\\Documents\\ITSUR\\WEB III\\UNIDAD 5\\repos\\WebApplication2\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Fer\\AppData\\Roaming\\NuGet\\NuGet.Config",

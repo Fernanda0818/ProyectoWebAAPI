@@ -61,6 +61,8 @@ namespace WebApplication1.Controllers
         {
             DateTime inicioFecha = DateTime.Parse(startDate);
             DateTime finFecha = DateTime.Parse(finishDate);
+
+
             //return contexto.Orders.Where
             //    (
             //        orders => orders.OrderDate.Value.Month >= startDate.Month &&
@@ -73,7 +75,7 @@ namespace WebApplication1.Controllers
                 where orders.OrderDate.Value.Month >= inicioFecha.Month &&
                       orders.OrderDate.Value.Month <= finFecha.Month
                 //orderby orderDetails.UnitPrice * orderDetails.Quantity descending
-                group new { products, orderDetails } by new { orderDetails.OrderId } into p
+                group new { products, orderDetails} by new {products.ProductId} into p
                 orderby p.Sum(p => p.orderDetails.UnitPrice * p.orderDetails.Quantity) descending
 
                 select new SalesPeriod()
@@ -123,7 +125,8 @@ namespace WebApplication1.Controllers
                         Producto = p.ProductId,
                         Movimiento = md.OrderId,
                         Nombre = p.ProductName,
-                        Cantidad = md.Quantity
+                        Cantidad = md.Quantity,
+                        
                     }
                 )
                 .Join(
@@ -132,10 +135,13 @@ namespace WebApplication1.Controllers
                     m => m.OrderId,
                     (md, m) => new
                     {
-                        Product = md.Producto,
+                        Ord = md.Movimiento,
                         Name = md.Nombre,
                         Quantity = md.Cantidad,
                         OrderD = m.OrderDate,
+                        customer = m.CustomerId,
+                        company = m.ShipName
+                        
 
                     }
                 )
@@ -175,7 +181,8 @@ namespace WebApplication1.Controllers
                         Movimiento = md.OrderId,
                         Cantidad = md.Quantity,
                         proN = p.UnitPrice,
-                        //quantXUnit = p.QuantityPerUnit
+                        quantXUnit = p.QuantityPerUnit,
+                        stock = p.UnitsInStock
                     }
             )
             .Join(
@@ -188,9 +195,10 @@ namespace WebApplication1.Controllers
                         Namee = md.Name,
                         Anio = m.OrderDate.Value.Year,
                         Mes = m.OrderDate.Value.Month,
-                        Cantidad = md.Cantidad,
+                        Cant = md.Cantidad,
                         unitPr = md.proN,
-                        //quaUni = md.quantXUnit
+                        quaUni = md.quantXUnit,
+                        unitStock = md.stock
                     }
                 )
                 .Where(m => m.Anio == year && m.Mes <= limSup && m.Mes >= limInf
@@ -201,10 +209,9 @@ namespace WebApplication1.Controllers
                     
                     price = e.Max(e => e.unitPr),
                     producto = e.Key.Namee,
-                    cantidad = e.Sum(l => l.Cantidad),
-                    
-                    
-
+                    cantidad = e.Sum(l => l.Cant),
+                    unidades = e.Max(e => e.quaUni),
+                    unitsInStock = e.Max(e => e.unitStock)
                 })
                 .OrderByDescending(e => e.cantidad)
                 .Take(5)
@@ -267,6 +274,41 @@ namespace WebApplication1.Controllers
             return lista;
         }
 
+
+        [HttpGet]
+        [Route("GetVentasPorCategoria")]
+        public IEnumerable<Object> GetVentasPorCategoria()
+        {
+            //IEnumerable<Object> lista =
+            //      from od in contexto.Orderdetails
+            //      join p in contexto.Products on od.ProductId equals p.ProductId
+            //      join c in contexto.Categories on p.Category equals c.CategoryId
+            //      group p by c.CategoryName into categoria
+            //      select new
+            //      {
+            //          categoria = categoria.Key,
+            //          productos = categoria.Count()
+
+            //      valor_inventario = categoria.Sum(x => x.UnitsInStock * x.UnitPrice)
+            //      };
+            //return lista
+
+
+            IEnumerable <Object> lista = 
+                        from p in contexto.Products
+                        join c in contexto.Categories on p.CategoryId equals c.CategoryId
+                        join od in contexto.Orderdetails on p.ProductId equals od.ProductId
+                        group new { p, od } by c.CategoryName into g
+                        select new
+                        {
+                            Categoria = g.Key,
+                            Productos = g.Count(),
+                            valor_inventario = g.Sum(x => x.p.UnitsInStock * x.p.UnitPrice),
+                            ventas_por_categoria = g.Sum(x => x.od.UnitPrice * x.od.Quantity)
+                        };
+            return lista;
+
+        }
 
 
 

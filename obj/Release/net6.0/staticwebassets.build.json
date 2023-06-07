@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oyOzB3Dg/9ENsErnpq7pUmjBwY8Sz4TRjqMpxwkGp4I=",
+  "Hash": "9vi8fEaEESDJpgGWaECnjJamNbQZrd39qQjFhXFrQe4=",
   "Source": "WebApplication1",
   "BasePath": "_content/WebApplication1",
   "Mode": "Default",
@@ -10,19 +10,19 @@
     {
       "Name": "WebApplication1\\wwwroot",
       "Source": "WebApplication1",
-      "ContentRoot": "C:\\Users\\tilo\\source\\repos\\WebApplication1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Fer\\Documents\\ITSUR\\WEB III\\UNIDAD 5\\repos\\WebApplication2\\WebApplication1\\wwwroot\\",
       "BasePath": "_content/WebApplication1",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\tilo\\source\\repos\\WebApplication1\\wwwroot\\grafica.html",
+      "Identity": "C:\\Users\\Fer\\Documents\\ITSUR\\WEB III\\UNIDAD 5\\repos\\WebApplication2\\WebApplication1\\wwwroot\\Consulta1.html",
       "SourceId": "WebApplication1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\tilo\\source\\repos\\WebApplication1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Fer\\Documents\\ITSUR\\WEB III\\UNIDAD 5\\repos\\WebApplication2\\WebApplication1\\wwwroot\\",
       "BasePath": "_content/WebApplication1",
-      "RelativePath": "grafica.html",
+      "RelativePath": "Consulta1.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31,15 +31,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\grafica.html"
+      "OriginalItemSpec": "wwwroot\\Consulta1.html"
     },
     {
-      "Identity": "C:\\Users\\tilo\\source\\repos\\WebApplication1\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\Fer\\Documents\\ITSUR\\WEB III\\UNIDAD 5\\repos\\WebApplication2\\WebApplication1\\wwwroot\\Consulta2.html",
       "SourceId": "WebApplication1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\tilo\\source\\repos\\WebApplication1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Fer\\Documents\\ITSUR\\WEB III\\UNIDAD 5\\repos\\WebApplication2\\WebApplication1\\wwwroot\\",
       "BasePath": "_content/WebApplication1",
-      "RelativePath": "index.html",
+      "RelativePath": "Consulta2.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -48,7 +48,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\index.html"
+      "OriginalItemSpec": "wwwroot\\Consulta2.html"
+    },
+    {
+      "Identity": "C:\\Users\\Fer\\Documents\\ITSUR\\WEB III\\UNIDAD 5\\repos\\WebApplication2\\WebApplication1\\wwwroot\\Consulta3.html",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Fer\\Documents\\ITSUR\\WEB III\\UNIDAD 5\\repos\\WebApplication2\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "Consulta3.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Consulta3.html"
     }
   ]
 }
